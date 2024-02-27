@@ -51,7 +51,7 @@ class HighSpeedTrain extends Train {
 }
 
 var train2 = new Train('blue', false, true);
-var highSpeed1 = new HighSpeedTrain(200, false, 'green', false, true);
+var highSpeed1 = new HighSpeedTrain(200, false, 'green', false);
 
 train2.toggleLights();
 train2.lightsStatus();
