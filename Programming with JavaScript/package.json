@@ -2,7 +2,7 @@
   "name": "programming-with-javascript",
   "version": "1.0.0",
   "description": "",
-  "main": "addFive.js",
+  "main": "addFiveTest.js",
   "scripts": {
     "test": "jest"
   },
