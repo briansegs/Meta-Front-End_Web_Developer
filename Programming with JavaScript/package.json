@@ -1,4 +1,14 @@
 {
+  "name": "programming-with-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "addFive.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0"
   }
