@@ -1,14 +1,9 @@
-function Nav() {
+function Footer() {
     return (
-        <nav className="main-nav">
-            <ul>
-                <li>Home</li>
-                <li>Articles</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+        <div className="copyright">
+            <p>Made with love by Myself</p>
+        </div>
     );
 };
 
-export default Nav;
+export default Footer;
