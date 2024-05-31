@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-p {
+.before {
   color: brown;
 }
 
@@ -20,4 +20,8 @@ input {
 
 button {
   margin-top: 1rem;
+}
+
+.message {
+  color: blue;
 }
