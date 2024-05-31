@@ -1,0 +1,27 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.before {
+  color: brown;
+}
+
+input {
+  height: 2rem;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0 0.5rem;
+
+  font-size: large;
+}
+
+button {
+  margin-top: 1rem;
+}
+
+.message {
+  color: blue;
+}
