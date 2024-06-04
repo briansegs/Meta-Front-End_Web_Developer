@@ -23,7 +23,7 @@ const App = () => {
             <label htmlFor="email">
               Email address <span>*</span>
             </label>
-            <input type="text" placeholder="Email address" is="email" />
+            <input type="text" placeholder="Email address" id="email" />
           </div>
 
           <div className="field">
