@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { validateEmail } from "./utils";
 import "./App.css";
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
     isTouched: false,
   });
   const [role, setRole] = useState("role");
+  const [checked, setChecked] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,7 +26,13 @@ const App = () => {
   };
 
   const getIsFormValid = () => {
-    if (firstName && email && password.value.length >= 8 && role !== "role") {
+    if (
+      firstName &&
+      email &&
+      password.value.length >= 8 &&
+      role !== "role" &&
+      validateEmail(email)
+    ) {
       return true;
     } else {
       return false;
@@ -79,7 +87,7 @@ const App = () => {
               Password <span>*</span>
             </label>
             <input
-              type="password"
+              type={checked ? "text" : "password"}
               placeholder="Password"
               id="password"
               value={password.value}
@@ -88,6 +96,16 @@ const App = () => {
               }
               onBlur={() => setPassWord({ ...password, isTouched: true })}
             />
+
+            <div className="checkbox">
+              <input
+                type="checkbox"
+                id="checkbox"
+                checked={checked}
+                onChange={() => setChecked(!checked)}
+              />
+              <label htmlFor="checkbox">Show Password</label>
+            </div>
 
             {password.isTouched && password.value.length < 8 && (
               <p className="pass_warning">
