@@ -7,13 +7,25 @@ const App = () => {
   const [email, setEmail] = useState("");
   const [password, setPassWord] = useState({
     value: "",
-    isActive: false,
+    isTouched: false,
   });
-  const [role, setRole] = useState("Role");
+  const [role, setRole] = useState("role");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassWord({
+      value: "",
+      isTouched: false,
+    });
+    setRole("role");
+  };
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <fieldset>
           <h2>Sign Up</h2>
 
@@ -66,9 +78,10 @@ const App = () => {
               onChange={(e) =>
                 setPassWord({ ...password, value: e.target.value })
               }
-              onBlur={() => setPassWord({ ...password, isActive: true })}
+              onBlur={() => setPassWord({ ...password, isTouched: true })}
             />
-            {password.isActive && password.value.length < 8 && (
+
+            {password.isTouched && password.value.length < 8 && (
               <p className="pass_warning">
                 Password should have at least 8 characters
               </p>
