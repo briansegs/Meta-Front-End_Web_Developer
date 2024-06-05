@@ -23,6 +23,14 @@ const App = () => {
     setRole("role");
   };
 
+  const getIsFormValid = () => {
+    if (firstName && email && password.value.length >= 8 && role !== "role") {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -103,7 +111,9 @@ const App = () => {
             </select>
           </div>
 
-          <button>CREATE ACCOUNT</button>
+          <button type="submit" disabled={!getIsFormValid()}>
+            CREATE ACCOUNT
+          </button>
         </fieldset>
       </form>
     </div>

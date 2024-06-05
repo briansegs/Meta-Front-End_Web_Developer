@@ -67,13 +67,19 @@ button {
   border: none;
   color: white;
   background-color: #4949c0;
+  text-transform: uppercase;
   cursor: pointer;
 
   transition: 0.2s ease;
 }
 
-button:hover {
+button:hover:enabled {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:disabled {
+  color: black;
+  background-color: rgb(197, 196, 196);
 }
 
 .pass_warning {
