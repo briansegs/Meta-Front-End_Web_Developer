@@ -1,9 +1,12 @@
 import "./App.css";
+import { UserProvider, useUser } from "./UserContext";
 
 const LoggedInUser = () => {
+  const { user } = useUser();
+
   return (
     <p>
-      Hello <span className="username"></span>
+      Hello <span className="username">{user.name}</span>
     </p>
   );
 };
@@ -18,6 +21,8 @@ const Header = () => {
 };
 
 const Page = () => {
+  const { user } = useUser();
+
   return (
     <div>
       <h2>What is asdfas asdfsda?</h2>
@@ -30,7 +35,7 @@ const Page = () => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
-      <p>Written by</p>
+      <p>Written by {user.name}</p>
     </div>
   );
 };
@@ -45,7 +50,11 @@ function App() {
 }
 
 function Root() {
-  return <App />;
+  return (
+    <UserProvider>
+      <App />
+    </UserProvider>
+  );
 }
 
 export default Root;
