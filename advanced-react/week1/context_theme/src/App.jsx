@@ -1,8 +1,13 @@
 import "./App.css";
 import Switch from "./Switch";
+import { ThemeProvider, useTheme } from "./ThemeContext";
 
 const Title = ({ children }) => {
-  return <h2>{children}</h2>;
+  const { theme } = useTheme();
+
+  return (
+    <h2 style={{ color: theme === "light" ? "black" : "white" }}>{children}</h2>
+  );
 };
 
 const Header = () => {
@@ -15,7 +20,11 @@ const Header = () => {
 };
 
 const Paragraph = ({ children }) => {
-  return <p>{children}</p>;
+  const { theme } = useTheme();
+
+  return (
+    <p style={{ color: theme === "light" ? "black" : "white" }}>{children}</p>
+  );
 };
 
 const Content = () => {
@@ -33,12 +42,27 @@ const Content = () => {
 };
 
 function App() {
+  const { theme } = useTheme();
+
   return (
-    <div className="app">
+    <div
+      className="app"
+      style={{
+        backgroundColor: theme === "light" ? "white" : "black",
+      }}
+    >
       <Header />
       <Content />
     </div>
   );
 }
 
-export default App;
+function Root() {
+  return (
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  );
+}
+
+export default Root;
