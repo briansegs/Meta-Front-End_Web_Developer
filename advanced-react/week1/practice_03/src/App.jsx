@@ -54,7 +54,7 @@ function App() {
   return (
     <div
       className="app"
-      style={{ backgroundColor: theme === "light" ? "#b1b6b6" : "#1f1d27" }}
+      style={{ backgroundColor: theme === "light" ? "#dfdfe6" : "#1f1d27" }}
     >
       <Switch />
 
