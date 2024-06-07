@@ -82,6 +82,7 @@ input {
   border-radius: 5px;
   border: none;
   background-color: #e6f1f1;
+  color: #4e7777;
 }
 
 ::placeholder {
@@ -96,6 +97,7 @@ select {
   border-radius: 5px;
   border: none;
   background-color: #e6f1f1;
+  color: #4e7777;
 }
 
 input:focus,
