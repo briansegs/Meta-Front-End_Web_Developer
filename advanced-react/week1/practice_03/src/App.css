@@ -13,7 +13,7 @@
 .card {
   border: 1px solid #e6f1f1;
   width: 800px;
-  height: 610px;
+  height: 650px;
   margin-top: 2rem;
   display: flex;
   border-radius: 10px;
@@ -31,7 +31,7 @@
 }
 
 .logo {
-  height: 12em;
+  height: 18em;
 }
 
 @keyframes logo-spin {
@@ -64,7 +64,7 @@ h2 {
   font-weight: 600;
 }
 
-p {
+.sub-text {
   line-height: 32px;
 }
 
@@ -75,7 +75,6 @@ form {
 }
 
 input {
-  margin-bottom: 0.75rem;
   height: 3.5rem;
   padding-left: 1rem;
   font-size: medium;
@@ -83,6 +82,7 @@ input {
   border: none;
   background-color: #e6f1f1;
   color: #4e7777;
+  width: 100%;
 }
 
 ::placeholder {
@@ -90,7 +90,6 @@ input {
 }
 
 select {
-  margin-bottom: 0.75rem;
   height: 3.5rem;
   font-size: medium;
   padding-left: 1rem;
@@ -98,6 +97,7 @@ select {
   border: none;
   background-color: #e6f1f1;
   color: #4e7777;
+  margin-bottom: 1.4rem;
 }
 
 input:focus,
@@ -124,4 +124,18 @@ button:hover {
 button:disabled {
   background-color: #1d2b2b;
   cursor: auto;
+}
+
+button:focus {
+  outline: none;
+}
+
+.warning {
+  height: 1.4rem;
+  padding-left: 4px;
+  margin: 0;
+  font-size: 14px;
+  color: #fc4646;
+  display: flex;
+  align-items: center;
 }

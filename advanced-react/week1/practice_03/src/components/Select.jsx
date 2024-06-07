@@ -11,7 +11,7 @@ const jobs = [
 
 const Select = ({ job, setJob }) => {
   return (
-    <select value={job} onChange={(e) => setJob(e.target.value)}>
+    <select id="job" value={job} onChange={(e) => setJob(e.target.value)}>
       {jobs.map((job) => (
         <option value={job} key={job}>
           {job}
