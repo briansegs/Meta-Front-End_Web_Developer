@@ -100,7 +100,7 @@ function App() {
                 <p
                   className="warning"
                   style={{
-                    color: theme === "light" ? "#fc4646" : "lightskyblue",
+                    color: theme === "light" ? "#fc4646" : "lightcoral",
                   }}
                 >
                   Name must be longer than 3 characters
@@ -123,7 +123,7 @@ function App() {
                 <p
                   className="warning"
                   style={{
-                    color: theme === "light" ? "#fc4646" : "lightskyblue",
+                    color: theme === "light" ? "#fc4646" : "lightcoral",
                   }}
                 >
                   Enter a valid email address
