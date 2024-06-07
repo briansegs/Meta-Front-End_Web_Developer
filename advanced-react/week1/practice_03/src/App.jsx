@@ -22,6 +22,10 @@ function App() {
       job: job,
     });
 
+    clearForm();
+  };
+
+  const clearForm = () => {
     setJob("Your profession");
     setName("");
     setEmail("");
