@@ -12,8 +12,8 @@
 
 .card {
   border: 1px solid #e6f1f1;
-  width: 50%;
-  height: 80vh;
+  width: 800px;
+  height: 610px;
   margin-top: 2rem;
   display: flex;
   border-radius: 10px;

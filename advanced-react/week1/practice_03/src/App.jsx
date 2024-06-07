@@ -8,6 +8,19 @@ function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setJob("");
+    setName("");
+    setEmail("");
+
+    console.log({
+      name: name,
+      email: email,
+      job: job,
+    });
+  };
+
   return (
     <div className="app">
       <div className="card">
@@ -19,7 +32,7 @@ function App() {
           <h2>Download 3 Free Emotional Intelligence Tools Pack PDF</h2>
           <p>By filling out your name and email address below.</p>
 
-          <form>
+          <form onSubmit={handleSubmit}>
             <input
               type="text"
               placeholder="Your first name"
@@ -36,7 +49,6 @@ function App() {
                 setEmail(e.target.value);
               }}
             />
-            <p>{email}</p>
             <Select job={job} setJob={setJob} />
             <button type="submit">Download PDF</button>
           </form>
