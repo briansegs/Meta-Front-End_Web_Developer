@@ -18,7 +18,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    alert("Download for " + name + " sent to " + email);
+    alert("Download for" + name + "sent to" + email);
 
     console.log({
       name: name,
