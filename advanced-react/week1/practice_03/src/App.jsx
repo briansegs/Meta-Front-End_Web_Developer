@@ -97,7 +97,14 @@ function App() {
                 style={!warnName() ? { marginBottom: "1.4rem" } : {}}
               />
               {warnName() && (
-                <p className="warning">Name must be longer than 3 characters</p>
+                <p
+                  className="warning"
+                  style={{
+                    color: theme === "light" ? "#fc4646" : "lightskyblue",
+                  }}
+                >
+                  Name must be longer than 3 characters
+                </p>
               )}
             </div>
             <div>
@@ -113,7 +120,14 @@ function App() {
                 style={!warnEmail() ? { marginBottom: "1.4rem" } : {}}
               />
               {warnEmail() && (
-                <p className="warning">Enter a valid email address</p>
+                <p
+                  className="warning"
+                  style={{
+                    color: theme === "light" ? "#fc4646" : "lightskyblue",
+                  }}
+                >
+                  Enter a valid email address
+                </p>
               )}
             </div>
 
