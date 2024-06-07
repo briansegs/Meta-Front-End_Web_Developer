@@ -5,6 +5,8 @@ import { useState } from "react";
 
 function App() {
   const [job, setJob] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
 
   return (
     <div className="app">
@@ -18,8 +20,23 @@ function App() {
           <p>By filling out your name and email address below.</p>
 
           <form>
-            <input type="text" placeholder="Your first name" />
-            <input type="text" placeholder="Email address" />
+            <input
+              type="text"
+              placeholder="Your first name"
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+            />
+            <input
+              type="text"
+              placeholder="Email address"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+            <p>{email}</p>
             <Select job={job} setJob={setJob} />
             <button type="submit">Download PDF</button>
           </form>
