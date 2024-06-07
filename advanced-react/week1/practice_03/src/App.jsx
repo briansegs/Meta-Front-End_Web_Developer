@@ -4,7 +4,7 @@ import Select from "./components/Select";
 import { useState } from "react";
 
 function App() {
-  const [job, setJob] = useState("");
+  const [job, setJob] = useState("Your profession");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
@@ -19,6 +19,12 @@ function App() {
       email: email,
       job: job,
     });
+  };
+
+  const validForm = () => {
+    return job !== "Your profession" && name.length >= 3 && email
+      ? true
+      : false;
   };
 
   return (
@@ -50,7 +56,9 @@ function App() {
               }}
             />
             <Select job={job} setJob={setJob} />
-            <button type="submit">Download PDF</button>
+            <button type="submit" disabled={!validForm()}>
+              Download PDF
+            </button>
           </form>
         </div>
       </div>

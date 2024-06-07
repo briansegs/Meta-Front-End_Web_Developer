@@ -114,4 +114,14 @@ button {
   background-color: #6264fd;
   color: white;
   font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8789fc;
+}
+
+button:disabled {
+  background-color: #1d2b2b;
+  cursor: auto;
 }
