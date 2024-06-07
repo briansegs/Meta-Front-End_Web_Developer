@@ -1,5 +1,6 @@
 import reactLogo from "./assets/react.svg";
 import "./App.css";
+import Select from "./components/Select";
 
 function App() {
   return (
@@ -16,9 +17,7 @@ function App() {
           <form>
             <input type="text" placeholder="Your first name" />
             <input type="text" placeholder="Email address" />
-            <select name="" id="">
-              <option value="job">Job</option>
-            </select>
+            <Select />
             <button type="submit">Download PDF</button>
           </form>
         </div>
