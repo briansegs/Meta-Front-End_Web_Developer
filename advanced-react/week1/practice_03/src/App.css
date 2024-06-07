@@ -8,13 +8,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 .card {
   border: 1px solid #e6f1f1;
   width: 800px;
   height: 650px;
-  margin-top: 2rem;
   display: flex;
   border-radius: 10px;
 }
@@ -26,7 +26,6 @@
   justify-content: center;
   align-items: center;
 
-  background-color: #e6f1f1;
   border-radius: 10px 0 0 10px;
 }
 

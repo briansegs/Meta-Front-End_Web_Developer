@@ -3,8 +3,12 @@ import "./App.css";
 import Select from "./components/Select";
 import { useState } from "react";
 import { isValidEmail } from "./util";
+import { ThemeProvider, useTheme } from "./ThemeContext";
+import Switch from "./Switch";
 
 function App() {
+  const { theme } = useTheme();
+
   const [job, setJob] = useState("Your profession");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -48,15 +52,34 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <div className="card">
-        <div className="left">
+    <div
+      className="app"
+      style={{ backgroundColor: theme === "light" ? "#b1b6b6" : "#1f1d27" }}
+    >
+      <Switch />
+
+      <div
+        className="card"
+        style={{
+          backgroundColor: theme === "light" ? "white" : "#17171f",
+          border: theme === "light" ? "1px solid #e6f1f1" : "1px solid #080811",
+        }}
+      >
+        <div
+          className="left"
+          style={{ backgroundColor: theme === "light" ? "#e6f1f1" : "#080811" }}
+        >
           <img src={reactLogo} className="logo react" alt="React logo" />
         </div>
 
         <div className="right">
-          <h2>Download 3 Free Emotional Intelligence Tools Pack PDF</h2>
-          <p className="sub-text">
+          <h2 style={{ color: theme === "light" ? "black" : "slategray" }}>
+            Download 3 Free Emotional Intelligence Tools Pack PDF
+          </h2>
+          <p
+            className="sub-text"
+            style={{ color: theme === "light" ? "black" : "slategray" }}
+          >
             By filling out your name and email address below.
           </p>
 
@@ -105,4 +128,12 @@ function App() {
   );
 }
 
-export default App;
+function Root() {
+  return (
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  );
+}
+
+export default Root;
