@@ -1,4 +1,5 @@
 const jobs = [
+  "Your profession",
   "Doctor",
   "Engineer",
   "Teacher",
@@ -8,9 +9,9 @@ const jobs = [
   "Pharmacist",
 ];
 
-const Select = () => {
+const Select = ({ job, setJob }) => {
   return (
-    <select name="" id="">
+    <select value={job} onChange={(e) => setJob(e.target.value)}>
       {jobs.map((job) => (
         <option value={job} key={job}>
           {job}

@@ -1,8 +1,11 @@
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import Select from "./components/Select";
+import { useState } from "react";
 
 function App() {
+  const [job, setJob] = useState("");
+
   return (
     <div className="app">
       <div className="card">
@@ -17,7 +20,7 @@ function App() {
           <form>
             <input type="text" placeholder="Your first name" />
             <input type="text" placeholder="Email address" />
-            <Select />
+            <Select job={job} setJob={setJob} />
             <button type="submit">Download PDF</button>
           </form>
         </div>
